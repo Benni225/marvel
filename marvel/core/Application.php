@@ -17,6 +17,10 @@ namespace marvel\core{
 		public static function create(){
 			Package::addPackage("applicationPackage", "app\controller", new PackageData());
 			Router::create()->usePackage("applicationPackage");
+			if(self::$instance === NULL){
+				self::$instance = new self;
+			}
+			return self::$instance;
 		}
 
 		public static function run(){
@@ -25,9 +29,6 @@ namespace marvel\core{
 			self::setAction(Router::get()->action());
 			self::storeData();
 
-			if(self::$instance === NULL){
-				self::$instance = new self;
-			}
 			$obj = new self::$controller;
 			$obj->{self::$action}();
 		}
