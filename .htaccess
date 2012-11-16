@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^(.*)/$ ./index.php\?param=$1 [L]
