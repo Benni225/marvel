@@ -3,7 +3,7 @@ use marvel\core\Application;
 use marvel\datahandler\Post;
 namespace marvel\core{
 	use \marvel\package\Package,
-	\marvel\datahandler\Post,
+	\marvel\datahandler\Data,
 	\marvel\datahandler\PackageData;
 	/**
 	 * Manage the application. Runs the router, stores data from GET and POST
@@ -90,7 +90,8 @@ namespace marvel\core{
 		 * @todo Add GET
 		 */
 		public static function storeData(){
-			DataRegistry::add("POST", $_POST, new Post());
+			DataRegistry::add("POST", $_POST, new Data());
+			DataRegistry::add("GET", Router::get()->urlData(), new Data());
 		}
 		/**
 		 * Sets the package-name to use as application.

@@ -6,7 +6,7 @@ namespace marvel\datahandler{
 	 * @author Benjamin Werner
 	 *
 	 */
-	class Post implements iArrayData{
+	class Data implements iArrayData{
 		private $data = Array();
 		/**
 		 * (non-PHPdoc)

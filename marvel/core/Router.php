@@ -12,17 +12,22 @@ namespace marvel\core{
 		 * The called controller.
 		 * @var string
 		 */
-		public static $controller;
+		public static $controller = "";
 		/**
 		 * The called action.
 		 * @var string
 		 */
-		public static $action;
+		public static $action = "";
 		/**
 		 * The package to route to.
 		 * @var string
 		 */
-		private static $package;
+		private static $package = "";
+		/**
+		 * Stores additional data from the url
+		 * @var array
+		 */
+		private static $urlData = Array();
 		/**
 		 * (non-PHPdoc)
 		 * @see marvel\interfaces.iSingleton::create()
@@ -36,11 +41,13 @@ namespace marvel\core{
 		/**
 		 * Extractes the controller and the action out of the
 		 * URI and the parameters with their values.
+		 * @since 0.0.1
+		 * @version 0.0.1 failure removed: instead of division it has to use modulo
 		 */
 		public function route(){
 			$parameter = $_GET['param'];
 			$parameter = explode("/", $parameter);
-			if(count($parameter) / 2 != 0){
+			if(count($parameter) % 2 != 0){
 				/*
 				 * No action is given.
 				 * The first parameter is the name of the controller.
@@ -48,6 +55,8 @@ namespace marvel\core{
 				 */
 				self::$controller = $parameter[0];
 				self::$action = $parameter[0]."Init";
+				for($i = 1; $i < count($parameter); $i+=2)
+					$urlParameters[$parameter[$i]] = $parameter[$i+1];
 			}else{
 				/*
 				 * An action is given.
@@ -56,7 +65,12 @@ namespace marvel\core{
 				 */
 				self::$controller = $parameter[0];
 				self::$action = $parameter[1]."Action";
+				for($i = 2; $i < count($parameter); $i+=2)
+					$urlParameters[$parameter[$i]] = $parameter[$i+1];
 			}
+			//If there is something in $_GET, now it is also in our url-parameters
+			$urlParameters[] = $_GET;
+			self::$urlData = $urlParameters;
 			self::$controller = Package::get(self::$package).self::$controller;
 
 			return $this;
@@ -88,6 +102,23 @@ namespace marvel\core{
 		 */
 		public function action(){
 			return self::$action;
+		}
+		/**
+		 * Returns the additional data from the url. For example:
+		 * http://www.mysite.com/controller/action/username/Marcus/birthday/11-3-1988/
+		 * This function returns an multidimensional array:
+		 * <code>
+		 * <?php
+		 * $urlData(
+		 * 		'username'	=>	'Marcus',
+		 * 		'birthday'	=>	'11-3-1988'
+		 * )
+		 * ?>
+		 * </code>
+		 * @return array
+		 */
+		public function urlData(){
+			return self::$urlData;
 		}
 
 
