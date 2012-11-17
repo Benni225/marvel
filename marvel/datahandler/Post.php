@@ -1,7 +1,17 @@
 <?php
 namespace marvel\datahandler{
-	class Post implements \marvel\interfaces\iArrayData{
-		private $data;
+	use marvel\interfaces\iArrayData;
+	/**
+	 * Stores and handles the POST-data.
+	 * @author Benjamin Werner
+	 *
+	 */
+	class Post implements iArrayData{
+		private $data = Array();
+		/**
+		 * (non-PHPdoc)
+		 * @see marvel\interfaces.iArrayData::get()
+		 */
 		public function get($name){
 			if($this->data == NULL || !is_array($this->data)){
 				return NULL;
@@ -13,7 +23,10 @@ namespace marvel\datahandler{
 				}
 			}
 		}
-
+		/**
+		 * (non-PHPdoc)
+		 * @see marvel\interfaces.iArrayData::set()
+		 */
 		public function set(Array $data){
 			$this->data = $data;
 		}

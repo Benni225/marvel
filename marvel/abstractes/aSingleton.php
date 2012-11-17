@@ -1,6 +1,12 @@
 <?php
 namespace marvel\abstractes{
-	abstract class aSingleton implements \marvel\interfaces\iSingleton{
+	use marvel\interfaces\iSingleton;
+	/**
+	 * Abstract singleton-class.
+	 * @author Benjamin Werner
+	 *
+	 */
+	abstract class aSingleton implements iSingleton{
 		protected static $instance = NULL;
 		protected function __construct(){}
 		protected function __clone(){}
