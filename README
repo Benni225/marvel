@@ -1,0 +1,24 @@
+Welcome to Marvel!
+******************
+Marvel wants to be an easy, simple to use PHP-Framework using the MVC-paradigma.
+It wants to support you with an easy syntax.
+
+Example:
+Application::create();
+Router::create()->route();
+Router::get()->controller();
+Router::get()->action();
+
+
+In the moment Marvel is in a pre-pre-pre-pre-alpha-phase. Become a part of Marvel. 
+
+Support us, so we can support you.
+
+What do we need? Persons with ideas! Feel free. Send us your ideas for Marvel. 
+Help us with the programming.
+
+Roadmap for the version 0.1:
+- adding a viewcomponent
+- adding a ORM-component
+- adding a databasecontroller
+- adding authentification 
