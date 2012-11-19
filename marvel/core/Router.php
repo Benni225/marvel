@@ -105,8 +105,10 @@ namespace marvel\core{
 		}
 		/**
 		 * Returns the additional data from the url. For example:
+		 *
 		 * http://www.mysite.com/controller/action/username/Marcus/birthday/11-3-1988/
-		 * This function returns an multidimensional array:
+		 *
+		 * will return an multidimensional array like:
 		 * <code>
 		 * <?php
 		 * $urlData(
