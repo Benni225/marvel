@@ -7,6 +7,7 @@ namespace marvel\core{
 	 *
 	 */
 	class DataRegistry extends aSingleton implements iRegistry{
+		protected static $instance = NULL;
 		/**
 		 * Array that includes every kind of data.
 		 * @var array

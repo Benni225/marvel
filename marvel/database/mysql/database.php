@@ -2,7 +2,7 @@
 namespace marvel\database\mysql{
 	use marvel\abstractes\aDatabase;
 	class database extends aDatabase{
-
+		protected static $instance = NULL;
 		/**
 		 * (non-PHPdoc)
 		 * @see marvel\interfaces.iSingleton::create()

@@ -8,6 +8,7 @@ namespace marvel\core{
 	 * @todo Integrate wildcards
 	 */
 	class Router extends aSingleton{
+		protected static $instance = NULL;
 		/**
 		 * The called controller.
 		 * @var string
@@ -56,7 +57,7 @@ namespace marvel\core{
 				self::$controller = $parameter[0];
 				self::$action = $parameter[0]."Init";
 				for($i = 1; $i < count($parameter); $i+=2)
-					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+				$urlParameters[$parameter[$i]] = $parameter[$i+1];
 			}else{
 				/*
 				 * An action is given.
@@ -66,7 +67,7 @@ namespace marvel\core{
 				self::$controller = $parameter[0];
 				self::$action = $parameter[1]."Action";
 				for($i = 2; $i < count($parameter); $i+=2)
-					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+				$urlParameters[$parameter[$i]] = $parameter[$i+1];
 			}
 			//If there is something in $_GET, now it is also in our url-parameters
 			$urlParameters[] = $_GET;

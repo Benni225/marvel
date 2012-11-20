@@ -7,7 +7,6 @@ namespace marvel\abstractes{
 	 *
 	 */
 	abstract class aSingleton implements iSingleton{
-		protected static $instance = NULL;
 		protected function __construct(){}
 		protected function __clone(){}
 	}
