@@ -1,8 +1,8 @@
 <?php
-use marvel\core\Application;
-use marvel\datahandler\Post;
 namespace marvel\core{
-	use \marvel\package\Package,
+use \marvel\core\Application,
+	\marvel\datahandler\Post,
+	\marvel\package\Package,
 	\marvel\datahandler\Data,
 	\marvel\datahandler\PackageData;
 	/**
@@ -72,6 +72,7 @@ namespace marvel\core{
 			$obj->{self::$action}();
 		}
 		/**
+		 *
 		 * Set the called controller.
 		 * @param string $controller
 		 */

@@ -1,447 +1,607 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<!-- template designed by Marco Von Ballmoos -->
 <title>Docs For Class Application</title>
-<link rel="stylesheet" href="../media/stylesheet.css" />
-<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
 </head>
 <body>
-	<div class="page-body">
-		<h2 class="class-name">Class Application</h2>
 
-		<a name="sec-description"></a>
-		<div class="info-box">
-			<div class="info-box-title">Description</div>
-			<div class="nav-bar">
-				<span class="disabled">Description</span> | <a
-					href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				| <a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-
-			</div>
-			<div class="info-box-body">
-				<!-- ========== Info from phpDoc block ========= -->
-				<p class="short-description">Manage the application. Runs the
-					router, stores data from GET and POST</p>
-				<ul class="tags">
-					<li><span class="field">author:</span> Benjamin Werner</li>
-					<li><span class="field">version:</span> 0.0.1</li>
-				</ul>
-				<p class="notes">
-					Located in <a class="field" href="_core---Application.php.html">/core/Application.php</a>
-					(line <span class="field"><a
-						href="../__filesource/fsource_Marvel__coreApplication.php.html#a15">15</a>
-					</span>)
-				</p>
-
-
-				<pre></pre>
-
-			</div>
-		</div>
-
-
-
-		<a name="sec-var-summary"></a>
-		<div class="info-box">
-			<div class="info-box-title">
-				Variable Summary</span>
-			</div>
-			<div class="nav-bar">
-				<a href="#sec-description">Description</a> | <span class="disabled">Vars</span>
-				(<a href="#sec-vars">details</a>) | <a href="#sec-method-summary">Methods</a>
-				(<a href="#sec-methods">details</a>)
-
-			</div>
-			<div class="info-box-body">
-				<div class="var-summary">
-					<div class="var-title">
-						static <span class="var-type">String</span> <a href="#$action"
-							title="details" class="var-name">$action</a>
-					</div>
-					<div class="var-title">
-						static <span class="var-type">string</span> <a href="#$controller"
-							title="details" class="var-name">$controller</a>
-					</div>
-					<div class="var-title">
-						static <span class="var-type">Get</span> <a href="#$dataGet"
-							title="details" class="var-name">$dataGet</a>
-					</div>
-					<div class="var-title">
-						static <span class="var-type">Post</span> <a href="#$dataPost"
-							title="details" class="var-name">$dataPost</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<a name="sec-method-summary"></a>
-		<div class="info-box">
-			<div class="info-box-title">
-				Method Summary</span>
-			</div>
-			<div class="nav-bar">
-				<a href="#sec-description">Description</a> | <a
-					href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-
-				| <span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-			</div>
-			<div class="info-box-body">
-				<div class="method-summary">
-					<div class="method-definition">
-						static <span class="method-result"><a
-							href="../Marvel/Application.html">Application</a>
-						</span> <a href="#create" title="details" class="method-name">create</a>
-						()
-					</div>
-					<div class="method-definition">
-						static <span class="method-result">void</span> <a href="#run"
-							title="details" class="method-name">run</a> ()
-					</div>
-					<div class="method-definition">
-						static <span class="method-result">void</span> <a
-							href="#setAction" title="details" class="method-name">setAction</a>
-						(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
-					</div>
-					<div class="method-definition">
-						static <span class="method-result">void</span> <a
-							href="#setController" title="details" class="method-name">setController</a>
-						(<span class="var-type">string</span>&nbsp;<span class="var-name">$controller</span>)
-					</div>
-					<div class="method-definition">
-						static <span class="method-result">void</span> <a
-							href="#storeData" title="details" class="method-name">storeData</a>
-						()
-					</div>
-
-					<div class="method-definition">
-						<span class="method-result">void</span> <a href="#usePackage"
-							title="details" class="method-name">usePackage</a> (<span
-							class="var-type">string</span>&nbsp;<span class="var-name">$package</span>)
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<a name="sec-vars"></a>
-		<div class="info-box">
-			<div class="info-box-title">Variables</div>
-			<div class="nav-bar">
-				<a href="#sec-description">Description</a> | <a
-					href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-
-
-				| <a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-
-			</div>
-			<div class="info-box-body">
-				<br /> <b>Strict Standards</b>: Only variables should be passed by
-				reference in <b>C:\xampp\htdocs\doc\phpDocumentor\Smarty-2.6.0\libs\Smarty_Compiler.class.php</b>
-				on line <b>712</b><br /> <br /> <b>Strict Standards</b>: Only
-				variables should be passed by reference in <b>C:\xampp\htdocs\doc\phpDocumentor\Smarty-2.6.0\libs\Smarty_Compiler.class.php</b>
-				on line <b>712</b><br /> <a name="var$action" id="$action">
-					<!-- -->
-				</A>
-				<div class="evenrow">
-
-					<div class="var-header">
-						<span class="var-title"> static <span class="var-type">String</span>
-							<span class="var-name">$action</span> = <span class="var-default">
-								&quot;&quot;</span> (line <span class="line-number"><a
-								href="../__filesource/fsource_Marvel__coreApplication.php.html#a25">25</a>
-						</span>) </span>
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Name of the action-method.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-
-
-
-
-				</div>
-				<a name="var$controller" id="$controller">
-					<!-- -->
-				</A>
-				<div class="oddrow">
-
-					<div class="var-header">
-						<span class="var-title"> static <span class="var-type">string</span>
-							<span class="var-name">$controller</span> = <span
-							class="var-default"> &quot;&quot;</span> (line <span
-							class="line-number"><a
-								href="../__filesource/fsource_Marvel__coreApplication.php.html#a20">20</a>
-						</span>) </span>
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Name of the controllerclass</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-
-
-
-
-				</div>
-				<a name="var$dataGet" id="$dataGet">
-					<!-- -->
-				</A>
-				<div class="evenrow">
-
-					<div class="var-header">
-						<span class="var-title"> static <span class="var-type">Get</span>
-							<span class="var-name">$dataGet</span> (line <span
-							class="line-number"><a
-								href="../__filesource/fsource_Marvel__coreApplication.php.html#a35">35</a>
-						</span>) </span>
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Object that stores the GET-data</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-
-
-
-
-				</div>
-				<a name="var$dataPost" id="$dataPost">
-					<!-- -->
-				</A>
-				<div class="oddrow">
-
-					<div class="var-header">
-						<span class="var-title"> static <span class="var-type">Post</span>
-							<span class="var-name">$dataPost</span> (line <span
-							class="line-number"><a
-								href="../__filesource/fsource_Marvel__coreApplication.php.html#a30">30</a>
-						</span>) </span>
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Object that stores the POST-data.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-
-
-
-
-				</div>
-
-			</div>
-		</div>
-
-		<a name="sec-methods"></a>
-		<div class="info-box">
-			<div class="info-box-title">Methods</div>
-			<div class="nav-bar">
-				<a href="#sec-description">Description</a> | <a
-					href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-
-			</div>
-			<div class="info-box-body">
-				<br /> <b>Strict Standards</b>: Only variables should be passed by
-				reference in <b>C:\xampp\htdocs\doc\phpDocumentor\Smarty-2.6.0\libs\Smarty_Compiler.class.php</b>
-				on line <b>712</b><br /> <br /> <b>Strict Standards</b>: Only
-				variables should be passed by reference in <b>C:\xampp\htdocs\doc\phpDocumentor\Smarty-2.6.0\libs\Smarty_Compiler.class.php</b>
-				on line <b>712</b><br /> <A NAME='method_detail'></A> <a
-					name="methodcreate" id="create">
-					<!-- -->
-				</a>
-				<div class="evenrow">
-
-					<div class="method-header">
-						<span class="method-title">static method create</span> (line <span
-							class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a54">54</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Initialize the application and add
-						the standard-package.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						static <span class="method-result"><a
-							href="../Marvel/Application.html">Application</a>
-						</span> <span class="method-name"> create </span> ()
-					</div>
-
-
-
-				</div>
-				<a name="methodrun" id="run">
-					<!-- -->
-				</a>
-				<div class="oddrow">
-
-					<div class="method-header">
-						<span class="method-title">static method run</span> (line <span
-							class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a65">65</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Routes and run the calld
-						controller and the called action.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						static <span class="method-result">void</span> <span
-							class="method-name"> run </span> ()
-					</div>
-
-
-
-				</div>
-				<a name="methodsetAction" id="setAction">
-					<!-- -->
-				</a>
-				<div class="evenrow">
-
-					<div class="method-header">
-						<span class="method-title">static method setAction</span> (line <span
-							class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a85">85</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Set the called action.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						static <span class="method-result">void</span> <span
-							class="method-name"> setAction </span> (<span class="var-type">string</span>&nbsp;<span
-							class="var-name">$action</span>)
-					</div>
-
-					<ul class="parameters">
-						<li><span class="var-type">string</span> <span
-							class="var-name">$action</span></li>
-					</ul>
-
-
-				</div>
-				<a name="methodsetController" id="setController">
-					<!-- -->
-				</a>
-				<div class="oddrow">
-
-					<div class="method-header">
-						<span class="method-title">static method setController</span>
-						(line <span class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a78">78</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Set the called controller.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						static <span class="method-result">void</span> <span
-							class="method-name"> setController </span> (<span
-							class="var-type">string</span>&nbsp;<span class="var-name">$controller</span>)
-					</div>
-
-					<ul class="parameters">
-						<li><span class="var-type">string</span> <span
-							class="var-name">$controller</span></li>
-					</ul>
-
-
-				</div>
-				<a name="methodstoreData" id="storeData">
-					<!-- -->
-				</a>
-				<div class="evenrow">
-
-					<div class="method-header">
-						<span class="method-title">static method storeData</span> (line <span
-							class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a92">92</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Stores the POST-data and GET-data.</p>
-					<ul class="tags">
-						<li><span class="field">todo:</span> Add GET</li>
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						static <span class="method-result">void</span> <span
-							class="method-name"> storeData </span> ()
-					</div>
-
-
-
-				</div>
-
-				<a name="methodusePackage" id="usePackage">
-					<!-- -->
-				</a>
-				<div class="oddrow">
-
-					<div class="method-header">
-						<span class="method-title">usePackage</span> (line <span
-							class="line-number"><a
-							href="../__filesource/fsource_Marvel__coreApplication.php.html#a100">100</a>
-						</span>)
-					</div>
-
-					<!-- ========== Info from phpDoc block ========= -->
-					<p class="short-description">Sets the package-name to use as
-						application.</p>
-					<ul class="tags">
-						<li><span class="field">access:</span> public</li>
-					</ul>
-
-					<div class="method-signature">
-						<span class="method-result">void</span> <span class="method-name">
-							usePackage </span> (<span class="var-type">string</span>&nbsp;<span
-							class="var-name">$package</span>)
-					</div>
-
-					<ul class="parameters">
-						<li><span class="var-type">string</span> <span
-							class="var-name">$package</span></li>
-					</ul>
-
-
-				</div>
-
-			</div>
-		</div>
-
-
-		<p class="notes" id="credit">
-			Documentation generated on Sat, 17 Nov 2012 13:57:03 +0100 by <a
-				href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-		</p>
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Marvel</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Marvel.html" class="menu">class tree: Marvel</a> ]
+		  [ <a href="../elementindex_Marvel.html" class="menu">index: Marvel</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
 	</div>
+      <b>Packages:</b><br />
+              <a href="../li_Marvel.html">Marvel</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Marvel/_abstractes---aDatabase.php.html">		aDatabase.php
+		</a><br>
+			<a href="../Marvel/_abstractes---aDatabaseDriver.php.html">		aDatabaseDriver.php
+		</a><br>
+			<a href="../Marvel/_abstractes---aIterator.php.html">		aIterator.php
+		</a><br>
+			<a href="../Marvel/_core---Application.php.html">		Application.php
+		</a><br>
+			<a href="../Marvel/_datahandler---ArrayData.php.html">		ArrayData.php
+		</a><br>
+			<a href="../Marvel/_abstractes---aSingleton.php.html">		aSingleton.php
+		</a><br>
+			<a href="../Marvel/_iterators---AssoziativArrayIterator.php.html">		AssoziativArrayIterator.php
+		</a><br>
+			<a href="../Marvel/_datahandler---Data.php.html">		Data.php
+		</a><br>
+			<a href="../Marvel/_database---mysql---database.php.html">		database.php
+		</a><br>
+			<a href="../Marvel/_core---DataRegistry.php.html">		DataRegistry.php
+		</a><br>
+			<a href="../Marvel/_database---DbQuery.php.html">		DbQuery.php
+		</a><br>
+			<a href="../Marvel/_database---mysql---driver.php.html">		driver.php
+		</a><br>
+			<a href="../Marvel/_core---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../Marvel/_interfaces---iArrayData.php.html">		iArrayData.php
+		</a><br>
+			<a href="../Marvel/_interfaces---iData.php.html">		iData.php
+		</a><br>
+			<a href="../Marvel/_interfaces---iIterator.php.html">		iIterator.php
+		</a><br>
+			<a href="../Marvel/_interfaces---iRegistry.php.html">		iRegistry.php
+		</a><br>
+			<a href="../Marvel/_interfaces---iSingleton.php.html">		iSingleton.php
+		</a><br>
+			<a href="../Marvel/_Marvel.php.html">		Marvel.php
+		</a><br>
+			<a href="../Marvel/_package---Package.php.html">		Package.php
+		</a><br>
+			<a href="../Marvel/_datahandler---PackageData.php.html">		PackageData.php
+		</a><br>
+			<a href="../Marvel/_core---Router.php.html">		Router.php
+		</a><br>
+	  </div><br />
+      
+            <b>Interfaces:</b><br />
+        <div class="package">
+		    		<a href="../Marvel/iArrayData.html">iArrayData</a><br />
+	    		<a href="../Marvel/iData.html">iData</a><br />
+	    		<a href="../Marvel/iIterator.html">iIterator</a><br />
+	    		<a href="../Marvel/iRegistry.html">iRegistry</a><br />
+	    		<a href="../Marvel/iSingleton.html">iSingleton</a><br />
+	  </div>
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Marvel/aDatabase.html">aDatabase</a><br />
+	    		<a href="../Marvel/aDatabaseDriver.html">aDatabaseDriver</a><br />
+	    		<a href="../Marvel/aIterator.html">aIterator</a><br />
+	    		<a href="../Marvel/Application.html">Application</a><br />
+	    		<a href="../Marvel/ArrayData.html">ArrayData</a><br />
+	    		<a href="../Marvel/aSingleton.html">aSingleton</a><br />
+	    		<a href="../Marvel/AssoziativArrayIterator.html">AssoziativArrayIterator</a><br />
+	    		<a href="../Marvel/Data.html">Data</a><br />
+	    		<a href="../Marvel/database.html">database</a><br />
+	    		<a href="../Marvel/DataRegistry.html">DataRegistry</a><br />
+	    		<a href="../Marvel/dbQuery.html">dbQuery</a><br />
+	    		<a href="../Marvel/driver.html">driver</a><br />
+	    		<a href="../Marvel/Exception.html">Exception</a><br />
+	    		<a href="../Marvel/Marvel.html">Marvel</a><br />
+	    		<a href="../Marvel/Package.html">Package</a><br />
+	    		<a href="../Marvel/PackageData.html">PackageData</a><br />
+	    		<a href="../Marvel/Router.html">Router</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: Application</h1>
+Source Location: /core/Application.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Manage the application. Runs the router, stores data from GET and POST</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>Benjamin Werner</li>
+            </ul>
+
+
+
+
+        
+    
+<h4>Version:</h4>
+<ul>
+  <li>0.0.1</li>
+</ul>
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Marvel/Application.html#var$action">$action</a></li>
+    <li><a href="../Marvel/Application.html#var$applicationPackage">$applicationPackage</a></li>
+    <li><a href="../Marvel/Application.html#var$controller">$controller</a></li>
+    <li><a href="../Marvel/Application.html#var$dataGet">$dataGet</a></li>
+    <li><a href="../Marvel/Application.html#var$dataPost">$dataPost</a></li>
+    <li><a href="../Marvel/Application.html#var$instance">$instance</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Marvel/Application.html#method__construct">__construct</a></li>
+    <li><a href="../Marvel/Application.html#methodcreate">create</a></li>
+    <li><a href="../Marvel/Application.html#methodrun">run</a></li>
+    <li><a href="../Marvel/Application.html#methodsetAction">setAction</a></li>
+    <li><a href="../Marvel/Application.html#methodsetController">setController</a></li>
+    <li><a href="../Marvel/Application.html#methodstoreData">storeData</a></li>
+    <li><a href="../Marvel/Application.html#methodusePackage">usePackage</a></li>
+    <li><a href="../Marvel/Application.html#method__clone">__clone</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a15">15</a>]<br />
+Manage the application. Runs the router, stores data from GET and POST<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>Benjamin Werner</td>
+  </tr>
+  <tr>
+    <td><b>version:</b>&nbsp;&nbsp;</td><td>0.0.1</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$action"></a>
+	<p></p>
+	<h4>static $action = <span class="value">&nbsp;&quot;&quot;</span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a25">25</a>]</p>
+  Name of the action-method.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>String</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$applicationPackage"></a>
+	<p></p>
+	<h4>static $applicationPackage = <span class="value">&nbsp;&quot;&quot;</span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a40">40</a>]</p>
+  The application-package to route to.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$controller"></a>
+	<p></p>
+	<h4>static $controller = <span class="value">&nbsp;&quot;&quot;</span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a20">20</a>]</p>
+  Name of the controllerclass<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$dataGet"></a>
+	<p></p>
+	<h4>static $dataGet = <span class="value"></span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a35">35</a>]</p>
+  Object that stores the GET-data<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>Get</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$dataPost"></a>
+	<p></p>
+	<h4>static $dataPost = <span class="value"></span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a30">30</a>]</p>
+  Object that stores the POST-data.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>Post</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$instance"></a>
+	<p></p>
+	<h4>static $instance = <span class="value">&nbsp;NULL</span></h4>
+	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a45">45</a>]</p>
+  Singleton-instance<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../Marvel/Application.html">Application</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+  <hr />
+	<a name="methodcreate"></a>
+	<h3>static method create <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a54">54</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static <a href="../Marvel/Application.html">Application</a> create(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Initialize the application and add the standard-package.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrun"></a>
+	<h3>static method run <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a65">65</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void run(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Routes and run the calld controller and the called action.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetAction"></a>
+	<h3>static method setAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a86">86</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void setAction(
+string
+$action)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set the called action.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$action</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetController"></a>
+	<h3>static method setController <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a79">79</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void setController(
+string
+$controller)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set the called controller.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$controller</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodstoreData"></a>
+	<h3>static method storeData <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a93">93</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void storeData(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Stores the POST-data and GET-data.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>todo:</b>&nbsp;&nbsp;</td><td>Add GET</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a47">47</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>Application __construct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodusePackage"></a>
+	<h3>method usePackage <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a101">101</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void usePackage(
+string
+$package)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets the package-name to use as application.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$package</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__clone"></a>
+	<h3>method __clone <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a48">48</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __clone(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 21 Nov 2012 01:34:23 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
 </body>
 </html>
