@@ -40,6 +40,8 @@
 		</a><br>
 			<a href="../Marvel/_abstractes---aIterator.php.html">		aIterator.php
 		</a><br>
+			<a href="../Marvel/_abstractes---aModel.php.html">		aModel.php
+		</a><br>
 			<a href="../Marvel/_core---Application.php.html">		Application.php
 		</a><br>
 			<a href="../Marvel/_datahandler---ArrayData.php.html">		ArrayData.php
@@ -72,6 +74,8 @@
 		</a><br>
 			<a href="../Marvel/_Marvel.php.html">		Marvel.php
 		</a><br>
+			<a href="../Marvel/_core---Model.php.html">		Model.php
+		</a><br>
 			<a href="../Marvel/_package---Package.php.html">		Package.php
 		</a><br>
 			<a href="../Marvel/_datahandler---PackageData.php.html">		PackageData.php
@@ -94,6 +98,7 @@
 		    		<a href="../Marvel/aDatabase.html">aDatabase</a><br />
 	    		<a href="../Marvel/aDatabaseDriver.html">aDatabaseDriver</a><br />
 	    		<a href="../Marvel/aIterator.html">aIterator</a><br />
+	    		<a href="../Marvel/aModel.html">aModel</a><br />
 	    		<a href="../Marvel/Application.html">Application</a><br />
 	    		<a href="../Marvel/ArrayData.html">ArrayData</a><br />
 	    		<a href="../Marvel/aSingleton.html">aSingleton</a><br />
@@ -105,6 +110,7 @@
 	    		<a href="../Marvel/driver.html">driver</a><br />
 	    		<a href="../Marvel/Exception.html">Exception</a><br />
 	    		<a href="../Marvel/Marvel.html">Marvel</a><br />
+	    		<a href="../Marvel/Model.html">Model</a><br />
 	    		<a href="../Marvel/Package.html">Package</a><br />
 	    		<a href="../Marvel/PackageData.html">PackageData</a><br />
 	    		<a href="../Marvel/Router.html">Router</a><br />
@@ -145,11 +151,9 @@ Source Location: /core/Application.php<br /><br />
 <h3><a href="#class_vars">Variables</a></h3>
 <ul>
     <li><a href="../Marvel/Application.html#var$action">$action</a></li>
-    <li><a href="../Marvel/Application.html#var$applicationPackage">$applicationPackage</a></li>
     <li><a href="../Marvel/Application.html#var$controller">$controller</a></li>
     <li><a href="../Marvel/Application.html#var$dataGet">$dataGet</a></li>
     <li><a href="../Marvel/Application.html#var$dataPost">$dataPost</a></li>
-    <li><a href="../Marvel/Application.html#var$instance">$instance</a></li>
   </ul>
 </td>
 
@@ -157,14 +161,12 @@ Source Location: /core/Application.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
-    <li><a href="../Marvel/Application.html#method__construct">__construct</a></li>
     <li><a href="../Marvel/Application.html#methodcreate">create</a></li>
     <li><a href="../Marvel/Application.html#methodrun">run</a></li>
     <li><a href="../Marvel/Application.html#methodsetAction">setAction</a></li>
     <li><a href="../Marvel/Application.html#methodsetController">setController</a></li>
     <li><a href="../Marvel/Application.html#methodstoreData">storeData</a></li>
     <li><a href="../Marvel/Application.html#methodusePackage">usePackage</a></li>
-    <li><a href="../Marvel/Application.html#method__clone">__clone</a></li>
   </ul>
 </td>
 
@@ -184,7 +186,7 @@ Source Location: /core/Application.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a15">15</a>]<br />
+[line 15]<br />
 Manage the application. Runs the router, stores data from GET and POST<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -207,7 +209,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
 	<a name="var$action"></a>
 	<p></p>
 	<h4>static $action = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a25">25</a>]</p>
+	<p>[line 25]</p>
   Name of the action-method.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -228,34 +230,10 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$applicationPackage"></a>
-	<p></p>
-	<h4>static $applicationPackage = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a40">40</a>]</p>
-  The application-package to route to.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="var$controller"></a>
 	<p></p>
 	<h4>static $controller = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a20">20</a>]</p>
+	<p>[line 20]</p>
   Name of the controllerclass<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -279,7 +257,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
 	<a name="var$dataGet"></a>
 	<p></p>
 	<h4>static $dataGet = <span class="value"></span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a35">35</a>]</p>
+	<p>[line 35]</p>
   Object that stores the GET-data<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -303,7 +281,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
 	<a name="var$dataPost"></a>
 	<p></p>
 	<h4>static $dataPost = <span class="value"></span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a30">30</a>]</p>
+	<p>[line 30]</p>
   Object that stores the POST-data.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -324,30 +302,6 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$instance"></a>
-	<p></p>
-	<h4>static $instance = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a45">45</a>]</p>
-  Singleton-instance<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td><a href="../Marvel/Application.html">Application</a></td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 </div><br />
 
 <hr />
@@ -356,7 +310,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
 <div class="tags">
   <hr />
 	<a name="methodcreate"></a>
-	<h3>static method create <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a54">54</a>]</span></h3>
+	<h3>static method create <span class="smalllinenumber">[line 54]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -381,7 +335,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
   </div>
   <hr />
 	<a name="methodrun"></a>
-	<h3>static method run <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a65">65</a>]</span></h3>
+	<h3>static method run <span class="smalllinenumber">[line 65]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -406,7 +360,7 @@ Manage the application. Runs the router, stores data from GET and POST<br /><br 
   </div>
   <hr />
 	<a name="methodsetAction"></a>
-	<h3>static method setAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a86">86</a>]</span></h3>
+	<h3>static method setAction <span class="smalllinenumber">[line 86]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -442,7 +396,7 @@ $action)</code>
   </div>
   <hr />
 	<a name="methodsetController"></a>
-	<h3>static method setController <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a79">79</a>]</span></h3>
+	<h3>static method setController <span class="smalllinenumber">[line 79]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -478,7 +432,7 @@ $controller)</code>
   </div>
   <hr />
 	<a name="methodstoreData"></a>
-	<h3>static method storeData <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a93">93</a>]</span></h3>
+	<h3>static method storeData <span class="smalllinenumber">[line 93]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -506,33 +460,8 @@ $controller)</code>
   </div>
 
   <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a47">47</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>Application __construct(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		<br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
 	<a name="methodusePackage"></a>
-	<h3>method usePackage <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a101">101</a>]</span></h3>
+	<h3>method usePackage <span class="smalllinenumber">[line 101]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -566,37 +495,12 @@ $package)</code>
     </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
-  <hr />
-	<a name="method__clone"></a>
-	<h3>method __clone <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreApplication.php.html#a48">48</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __clone(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		<br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
 </div><br />
 
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 21 Nov 2012 01:34:23 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 25 Nov 2012 13:27:42 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -40,6 +40,8 @@
 		</a><br>
 			<a href="../Marvel/_abstractes---aIterator.php.html">		aIterator.php
 		</a><br>
+			<a href="../Marvel/_abstractes---aModel.php.html">		aModel.php
+		</a><br>
 			<a href="../Marvel/_core---Application.php.html">		Application.php
 		</a><br>
 			<a href="../Marvel/_datahandler---ArrayData.php.html">		ArrayData.php
@@ -72,6 +74,8 @@
 		</a><br>
 			<a href="../Marvel/_Marvel.php.html">		Marvel.php
 		</a><br>
+			<a href="../Marvel/_core---Model.php.html">		Model.php
+		</a><br>
 			<a href="../Marvel/_package---Package.php.html">		Package.php
 		</a><br>
 			<a href="../Marvel/_datahandler---PackageData.php.html">		PackageData.php
@@ -94,6 +98,7 @@
 		    		<a href="../Marvel/aDatabase.html">aDatabase</a><br />
 	    		<a href="../Marvel/aDatabaseDriver.html">aDatabaseDriver</a><br />
 	    		<a href="../Marvel/aIterator.html">aIterator</a><br />
+	    		<a href="../Marvel/aModel.html">aModel</a><br />
 	    		<a href="../Marvel/Application.html">Application</a><br />
 	    		<a href="../Marvel/ArrayData.html">ArrayData</a><br />
 	    		<a href="../Marvel/aSingleton.html">aSingleton</a><br />
@@ -105,6 +110,7 @@
 	    		<a href="../Marvel/driver.html">driver</a><br />
 	    		<a href="../Marvel/Exception.html">Exception</a><br />
 	    		<a href="../Marvel/Marvel.html">Marvel</a><br />
+	    		<a href="../Marvel/Model.html">Model</a><br />
 	    		<a href="../Marvel/Package.html">Package</a><br />
 	    		<a href="../Marvel/PackageData.html">PackageData</a><br />
 	    		<a href="../Marvel/Router.html">Router</a><br />
@@ -144,8 +150,6 @@ Source Location: /core/Router.php<br /><br />
     <li><a href="../Marvel/Router.html#var$action">$action</a></li>
     <li><a href="../Marvel/Router.html#var$controller">$controller</a></li>
     <li><a href="../Marvel/Router.html#var$instance">$instance</a></li>
-    <li><a href="../Marvel/Router.html#var$package">$package</a></li>
-    <li><a href="../Marvel/Router.html#var$urlData">$urlData</a></li>
   </ul>
 </td>
 
@@ -199,7 +203,7 @@ Source Location: /core/Router.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a10">10</a>]<br />
+[line 10]<br />
 Routes to a in the URI specified controller and action and extractes  Given parameters and values.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -222,7 +226,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
 	<a name="var$action"></a>
 	<p></p>
 	<h4>static $action = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a21">21</a>]</p>
+	<p>[line 21]</p>
   The called action.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -246,7 +250,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
 	<a name="var$controller"></a>
 	<p></p>
 	<h4>static $controller = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a16">16</a>]</p>
+	<p>[line 16]</p>
   The called controller.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -270,7 +274,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
 	<a name="var$instance"></a>
 	<p></p>
 	<h4>static $instance = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a11">11</a>]</p>
+	<p>[line 11]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -291,54 +295,6 @@ Routes to a in the URI specified controller and action and extractes  Given para
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$package"></a>
-	<p></p>
-	<h4>static $package = <span class="value">&nbsp;&quot;&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a26">26</a>]</p>
-  The package to route to.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$urlData"></a>
-	<p></p>
-	<h4>static $urlData = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a31">31</a>]</p>
-  Stores additional data from the url<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 </div><br />
 
 <hr />
@@ -347,7 +303,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
 <div class="tags">
   <hr />
 	<a name="methodcreate"></a>
-	<h3>static method create <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a36">36</a>]</span></h3>
+	<h3>static method create <span class="smalllinenumber">[line 36]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -375,7 +331,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
   </div>
   <hr />
 	<a name="methodget"></a>
-	<h3>static method get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a89">89</a>]</span></h3>
+	<h3>static method get <span class="smalllinenumber">[line 89]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -401,7 +357,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
 
   <hr />
 	<a name="methodaction"></a>
-	<h3>method action <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a104">104</a>]</span></h3>
+	<h3>method action <span class="smalllinenumber">[line 104]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -429,7 +385,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
   </div>
   <hr />
 	<a name="methodcontroller"></a>
-	<h3>method controller <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a96">96</a>]</span></h3>
+	<h3>method controller <span class="smalllinenumber">[line 96]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -454,7 +410,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
   </div>
   <hr />
 	<a name="methodroute"></a>
-	<h3>method route <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a48">48</a>]</span></h3>
+	<h3>method route <span class="smalllinenumber">[line 48]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -485,7 +441,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
   </div>
   <hr />
 	<a name="methodurlData"></a>
-	<h3>method urlData <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a123">123</a>]</span></h3>
+	<h3>method urlData <span class="smalllinenumber">[line 123]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -516,7 +472,7 @@ Routes to a in the URI specified controller and action and extractes  Given para
   </div>
   <hr />
 	<a name="methodusePackage"></a>
-	<h3>method usePackage <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__coreRouter.php.html#a83">83</a>]</span></h3>
+	<h3>method usePackage <span class="smalllinenumber">[line 83]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -555,7 +511,7 @@ $package)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 21 Nov 2012 01:34:25 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 25 Nov 2012 13:27:43 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

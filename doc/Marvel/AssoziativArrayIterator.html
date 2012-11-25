@@ -40,6 +40,8 @@
 		</a><br>
 			<a href="../Marvel/_abstractes---aIterator.php.html">		aIterator.php
 		</a><br>
+			<a href="../Marvel/_abstractes---aModel.php.html">		aModel.php
+		</a><br>
 			<a href="../Marvel/_core---Application.php.html">		Application.php
 		</a><br>
 			<a href="../Marvel/_datahandler---ArrayData.php.html">		ArrayData.php
@@ -72,6 +74,8 @@
 		</a><br>
 			<a href="../Marvel/_Marvel.php.html">		Marvel.php
 		</a><br>
+			<a href="../Marvel/_core---Model.php.html">		Model.php
+		</a><br>
 			<a href="../Marvel/_package---Package.php.html">		Package.php
 		</a><br>
 			<a href="../Marvel/_datahandler---PackageData.php.html">		PackageData.php
@@ -94,6 +98,7 @@
 		    		<a href="../Marvel/aDatabase.html">aDatabase</a><br />
 	    		<a href="../Marvel/aDatabaseDriver.html">aDatabaseDriver</a><br />
 	    		<a href="../Marvel/aIterator.html">aIterator</a><br />
+	    		<a href="../Marvel/aModel.html">aModel</a><br />
 	    		<a href="../Marvel/Application.html">Application</a><br />
 	    		<a href="../Marvel/ArrayData.html">ArrayData</a><br />
 	    		<a href="../Marvel/aSingleton.html">aSingleton</a><br />
@@ -105,6 +110,7 @@
 	    		<a href="../Marvel/driver.html">driver</a><br />
 	    		<a href="../Marvel/Exception.html">Exception</a><br />
 	    		<a href="../Marvel/Marvel.html">Marvel</a><br />
+	    		<a href="../Marvel/Model.html">Model</a><br />
 	    		<a href="../Marvel/Package.html">Package</a><br />
 	    		<a href="../Marvel/PackageData.html">PackageData</a><br />
 	    		<a href="../Marvel/Router.html">Router</a><br />
@@ -139,13 +145,6 @@ Source Location: /iterators/AssoziativArrayIterator.php<br /><br />
         
 </td>
 
-<td valign="top">
-<h3><a href="#class_vars">Variables</a></h3>
-<ul>
-    <li><a href="../Marvel/AssoziativArrayIterator.html#var$__counter">$__counter</a></li>
-    <li><a href="../Marvel/AssoziativArrayIterator.html#var$__current">$__current</a></li>
-  </ul>
-</td>
 
 
 <td valign="top">
@@ -153,6 +152,7 @@ Source Location: /iterators/AssoziativArrayIterator.php<br /><br />
 <ul>
     <li><a href="../Marvel/AssoziativArrayIterator.html#method__construct">__construct</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a></li>
+    <li><a href="../Marvel/AssoziativArrayIterator.html#methodeachValue">eachValue</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodfillCurrent">fillCurrent</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodfirst">first</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodget">get</a></li>
@@ -161,6 +161,7 @@ Source Location: /iterators/AssoziativArrayIterator.php<br /><br />
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodlast">last</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodnext">next</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodprevious">previous</a></li>
+    <li><a href="../Marvel/AssoziativArrayIterator.html#methodreturnKey">returnKey</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#methodsave">save</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#method__get">__get</a></li>
     <li><a href="../Marvel/AssoziativArrayIterator.html#method__set">__set</a></li>
@@ -197,63 +198,10 @@ Source Location: /iterators/AssoziativArrayIterator.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a5">5</a>]<br />
+[line 5]<br />
 </div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
-<hr />
-<a name="class_vars"></a>
-<h3>Class Variables</h3>
-<div class="tags">
-	<a name="var$__counter"></a>
-	<p></p>
-	<h4>$__counter = <span class="value"></span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a17">17</a>]</p>
-  Internal counter<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>integer</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$__current"></a>
-	<p></p>
-	<h4>$__current = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a11">11</a>]</p>
-  Is the stack. It filled with the current array of the ressource.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-</div><br />
 
 <hr />
 <a name="class_methods"></a>
@@ -262,7 +210,7 @@ Source Location: /iterators/AssoziativArrayIterator.php<br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a21">21</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 21]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -298,17 +246,18 @@ $ressource)</code>
   </div>
   <hr />
 	<a name="methodeach"></a>
-	<h3>method each <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a184">184</a>]</span></h3>
+	<h3>method each <span class="smalllinenumber">[line 187]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void each(
 function
-$callback)</code>
+$callback, [mixed
+$additionalData = NULL])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Runs a callbackfunction on every array or arrays item of the ressource.<br /><br /><p>The callback-function gets the current array as an  array itself, or as the items of the array. In this case the number of  parameters of the callback-function has to be equal to the  number of ressourceitems.  <ol><li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span>\<span class="src-id">marvel</span>\<span class="src-id">iterators</span>\<span class="src-id"><a href="../Marvel/AssoziativArrayIterator.html">AssoziativArrayIterator</a></span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span></div></li>
+		Runs a callbackfunction on every item of the ressource.<br /><br /><p>Following numbers of parameters the callbackfunction can have:  1: - the value given  2: - the key and the value given  &gt;2: - the key, each value and additional data  <ol><li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span>\<span class="src-id">marvel</span>\<span class="src-id">iterators</span>\<span class="src-id"><a href="../Marvel/AssoziativArrayIterator.html">AssoziativArrayIterator</a></span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">0&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key1&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value1&quot;</span><span class="src-sym">,</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key2&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value2&quot;</span><span class="src-sym">,</span></div></li>
@@ -325,13 +274,14 @@ $callback)</code>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key3&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value9&quot;</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">))</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$val1</span><span class="src-sym">,&nbsp;</span><span class="src-var">$val2</span><span class="src-sym">,&nbsp;</span><span class="src-var">$val3</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;Val1:&nbsp;&quot;</span>.<span class="src-var">$val1</span>.<span class="src-str">&quot;&nbsp;-&nbsp;Val2:&nbsp;&quot;</span>.<span class="src-var">$val2</span>.<span class="src-str">&quot;&nbsp;-&nbsp;Val3:&nbsp;&quot;</span>.<span class="src-var">$val3</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$index</span><span class="src-sym">,&nbsp;</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$index</span>.<span class="src-str">&quot;&nbsp;=&nbsp;&quot;</span>.<span class="src-var">$value</span>.<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/var_dump">var_dump</a><span class="src-sym">(</span><span class="src-var">$array</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$index</span><span class="src-sym">,&nbsp;</span><span class="src-var">$value</span><span class="src-sym">,&nbsp;</span><span class="src-var">$text</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$text</span>.<span class="src-str">&quot;&nbsp;&quot;</span>.<span class="src-var">$index</span>.<span class="src-str">&quot;&nbsp;=&nbsp;&quot;</span>.<span class="src-var">$value</span>.<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;Following&nbsp;value&nbsp;is&nbsp;registered:&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/var_dump">var_dump</a><span class="src-sym">(</span><span class="src-var">$value</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 </ol></p><br /><br /><br />
@@ -354,13 +304,74 @@ $callback)</code>
         <td><b>$callback</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$additionalData</b>&nbsp;&nbsp;</td>
+        <td>(optional)$additionalData</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodeachValue"></a>
+	<h3>method eachValue <span class="smalllinenumber">[line 232]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void eachValue(
+
+$callback)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Runs a callbackfunction on every item of the ressource.<br /><br /><p>If the value of an item is an array, the number of  parameters has to be equal to the number of items of that array.  <ol><li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span>\<span class="src-id">marvel</span>\<span class="src-id">iterators</span>\<span class="src-id"><a href="../Marvel/AssoziativArrayIterator.html">AssoziativArrayIterator</a></span><span class="src-sym">(</span><span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">0&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key1&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value1&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key2&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value2&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key3&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value3&quot;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">1&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key1&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value4&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key2&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value5&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key3&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value6&quot;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-num">2&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key1&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value7&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key2&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value8&quot;</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;key3&quot;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;value9&quot;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$a</span><span class="src-sym">-&gt;</span><a href="../Marvel/AssoziativArrayIterator.html#methodeach">each</a><span class="src-sym">(</span><span class="src-key">function</span><span class="src-sym">(</span><span class="src-var">$val1</span><span class="src-sym">,&nbsp;</span><span class="src-var">$val2</span><span class="src-sym">,&nbsp;</span><span class="src-var">$val3</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;Val1:&nbsp;&quot;</span>.<span class="src-var">$val1</span>.<span class="src-str">&quot;&nbsp;-&nbsp;Val2:&nbsp;&quot;</span>.<span class="src-var">$val2</span>.<span class="src-str">&quot;&nbsp;-&nbsp;Val3:&nbsp;&quot;</span>.<span class="src-var">$val3</span>.<span class="src-str">&quot;&lt;br&nbsp;/&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$callback</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
         </table>
     </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="methodfillCurrent"></a>
-	<h3>method fillCurrent <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a143">143</a>]</span></h3>
+	<h3>method fillCurrent <span class="smalllinenumber">[line 144]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -385,7 +396,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodfirst"></a>
-	<h3>method first <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a49">49</a>]</span></h3>
+	<h3>method first <span class="smalllinenumber">[line 49]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -419,7 +430,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodget"></a>
-	<h3>method get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a101">101</a>]</span></h3>
+	<h3>method get <span class="smalllinenumber">[line 101]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -444,11 +455,11 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodgetRessource"></a>
-	<h3>method getRessource <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a136">136</a>]</span></h3>
+	<h3>method getRessource <span class="smalllinenumber">[line 137]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void getRessource(
+		<code>array getRessource(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
@@ -469,7 +480,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodisLast"></a>
-	<h3>method isLast <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a108">108</a>]</span></h3>
+	<h3>method isLast <span class="smalllinenumber">[line 108]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -503,7 +514,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodlast"></a>
-	<h3>method last <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a88">88</a>]</span></h3>
+	<h3>method last <span class="smalllinenumber">[line 88]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -537,7 +548,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodnext"></a>
-	<h3>method next <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a62">62</a>]</span></h3>
+	<h3>method next <span class="smalllinenumber">[line 62]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -571,7 +582,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="methodprevious"></a>
-	<h3>method previous <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a75">75</a>]</span></h3>
+	<h3>method previous <span class="smalllinenumber">[line 75]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -604,12 +615,37 @@ $callback)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodsave"></a>
-	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a124">124</a>]</span></h3>
+	<a name="methodreturnKey"></a>
+	<h3>method returnKey <span class="smalllinenumber">[line 243]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void save(
+		<code>string returnKey(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns the actuall keyname of the ressource.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsave"></a>
+	<h3>method save <span class="smalllinenumber">[line 124]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>object save(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
@@ -630,7 +666,7 @@ $callback)</code>
   </div>
   <hr />
 	<a name="method__get"></a>
-	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a29">29</a>]</span></h3>
+	<h3>method __get <span class="smalllinenumber">[line 29]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -666,7 +702,7 @@ $name)</code>
   </div>
   <hr />
 	<a name="method__set"></a>
-	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Marvel__iteratorsAssoziativArrayIterator.php.html#a42">42</a>]</span></h3>
+	<h3>method __set <span class="smalllinenumber">[line 42]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -711,7 +747,7 @@ $value)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 21 Nov 2012 01:34:23 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 25 Nov 2012 13:27:42 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -118,8 +118,8 @@ namespace marvel\iterators{
             }
 		}
 		/**
-		 *
 		 * Saves the stack to the current array.
+		 * @return object
 		 */
 		public function save(){
 			if(!empty($this->__current)){
@@ -128,10 +128,11 @@ namespace marvel\iterators{
 					$this->ressource[$this->__counter][$key] = $value;
 				}
 			}
+			return $this;
 		}
 		/**
-		 *
 		 * Returns the ressource.
+		 * @return array
 		 */
 		public function getRessource(){
 			return $this->ressource;
@@ -146,11 +147,65 @@ namespace marvel\iterators{
 			}
 		}
 		/**
-		 * Runs a callbackfunction on every array or arrays item of the ressource.
-		 * The callback-function gets the current array as an
-		 * array itself, or as the items of the array. In this case the number of
-		 * parameters of the callback-function has to be equal to the
-		 * number of ressourceitems.
+		 * Runs a callbackfunction on every item of the ressource.
+		 * Following numbers of parameters the callbackfunction can have:
+		 * 1: - the value given
+		 * 2: - the key and the value given
+		 * >2: - the key, each value and additional data
+		 * <code>
+		 *	$a = new \marvel\iterators\AssoziativArrayIterator(array(
+		 *		0	=>	array(
+		 *			"key1"	=>	"value1",
+		 *			"key2"	=>	"value2",
+		 * 			"key3"	=>	"value3"
+		 *		),
+		 *		1	=>	array(
+		 *			"key1"	=>	"value4",
+		 *			"key2"	=>	"value5",
+		 *			"key3"	=>	"value6"
+		 *		),
+		 *		2	=>	array(
+		 *			"key1"	=>	"value7",
+		 *			"key2"	=>	"value8",
+		 *			"key3"	=>	"value9"
+		 *		)
+		 *	));
+		 *	$a->each(function($index, $value){
+		 *		echo $index." = ".$value."<br />";
+		 *	});
+		 *	$a->each(function($index, $value, $text){
+		 *		echo $text." ".$index." = ".$value."<br />";
+		 *	}, "Following value is registered:");
+		 *	$a->each(function($value){
+		 *		var_dump($value);
+		 *		echo "<br />";
+		 *	});
+		 * </code>
+		 * @param function $callback
+		 * @param mixed (optional)$additionalData
+		 */
+		public function each($callback, $additionalData = NULL){
+			$rFunction = new \ReflectionFunction($callback);
+			$numberOfParameters = $rFunction->getNumberOfParameters();
+			foreach($this->ressource AS $index=>$value){
+				if($numberOfParameters == 1)
+					call_user_func($callback, $value);
+				elseif($numberOfParameters == 2)
+					call_user_func($callback, $index, $value);
+				else{
+					$data = array($index, $value);
+					if($additionalData !== NULL){
+						array_push($data, $additionalData);
+					}
+					call_user_func_array($callback, $data);
+				}
+			}
+			return $this;
+		}
+		/**
+		 * Runs a callbackfunction on every item of the ressource.
+		 * If the value of an item is an array, the number of
+		 * parameters has to be equal to the number of items of that array.
 		 * <code>
 		 *	$a = new \marvel\iterators\AssoziativArrayIterator(array(
 		 *		0	=>	array(
@@ -170,26 +225,23 @@ namespace marvel\iterators{
 		 *		)
 		 *	));
 		 *	$a->each(function($val1, $val2, $val3){
-		 *		echo "Val1: ".$val1." - Val2: ".$val2." - Val3: ".$val3;
-		 *		echo "<br />";
+		 *		echo "Val1: ".$val1." - Val2: ".$val2." - Val3: ".$val3."<br />";
 		 *	});
-		 *	echo "<br />";
-		 *	$a->each(function($array){
-		 *		var_dump($array);
-		 *		echo "<br />";
-		 *	});
-		 * </code>
-		 * @param function $callback
+		 *	</code>
 		 */
-		public function each($callback){
+		public function eachValue($callback){
 			$rFunction = new \ReflectionFunction($callback);
 			$numberOfParameters = $rFunction->getNumberOfParameters();
 			foreach($this->ressource AS $value){
-				if($numberOfParameters == 1)
-					call_user_func($callback, $value);
-				else
-					call_user_func_array($callback, $value);
+				call_user_func_array($callback, $value);
 			}
+		}
+		/**
+		 * Returns the actuall keyname of the ressource.
+		 * @return string
+		 */
+		public function returnKey(){
+			return key($this->ressource);
 		}
 	}
 }

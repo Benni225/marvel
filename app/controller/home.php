@@ -23,10 +23,12 @@ namespace app\controller{
 				)
 			));
 			echo "<br />";
-			$a->each(function($val1, $val2, $val3){
+			$a->eachValue(function($val1, $val2, $val3){
 				echo "Val1: ".$val1." - Val2: ".$val2." - Val3: ".$val3;
 				echo "<br />";
 			});
+			echo "<br />";
+			$m = new myModel();
 		}
 	}
 }
