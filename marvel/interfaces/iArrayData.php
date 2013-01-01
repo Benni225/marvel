@@ -1,5 +1,4 @@
 <?php
-namespace marvel\interfaces{
 	/**
 	 * An interfaces for the handling of array-data.
 	 * @author Benjamin Werner
@@ -17,4 +16,3 @@ namespace marvel\interfaces{
 		 */
 		public function set(Array $data);
 	}
-}

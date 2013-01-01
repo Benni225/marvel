@@ -1,10 +1,4 @@
 <?php
-namespace marvel\core{
-use \marvel\core\Application,
-	\marvel\datahandler\Post,
-	\marvel\package\Package,
-	\marvel\datahandler\Data,
-	\marvel\datahandler\PackageData;
 	/**
 	 * Manage the application. Runs the router, stores data from GET and POST
 	 *
@@ -43,6 +37,7 @@ use \marvel\core\Application,
 		 * @var Application
 		 */
 		private static $instance = NULL;
+		private static $configuration = Array();
 
 		private function __construct(){}
 		private function __clone(){}
@@ -52,24 +47,40 @@ use \marvel\core\Application,
 		 * @return Application
 		 */
 		public static function create(){
-			Package::addPackage("applicationPackage", "app\controller", new PackageData());
-			Router::create()->usePackage("applicationPackage");
+			Package::addPackage("app", "app/", new PackageData());
+			//Initialize the app
+			require_once Package::get("app")."boot.php";
+
+			Router::create()->route();
+			self::setController(Router::get()->controller());
+			self::setAction(Router::get()->action());
+			self::storeData();
+
 			if(self::$instance === NULL){
 				self::$instance = new self;
 			}
 			return self::$instance;
 		}
 		/**
-		 * Routes and run the calld controller and the called action.
+		 * Sets the configuration of the application. Normaly called in boot.php.
+		 * @param array $configuration
+		 */
+		public static function configuration(Array $configuration){
+			self::$configuration = $configuration;
+		}
+		/**
+		 * Routes and run the called controller and the called action.
 		 */
 		public static function run(){
-			Router::get()->route();
-			self::setController(Router::get()->controller());
-			self::setAction(Router::get()->action());
-			self::storeData();
-
+			if(empty(self::$controller) OR self::$controller == '' OR self::$controller == NULL){
+				self::setController(self::$configuration['defaultController']);
+			}
+			if(empty(self::$action)){
+				self::setAction(self::$configuration['defaultAction']);
+			}
 			$obj = new self::$controller;
-			$obj->{self::$action}();
+			$output = $obj->{self::$action}();
+			self::output($output);
 		}
 		/**
 		 *
@@ -101,5 +112,11 @@ use \marvel\core\Application,
 		public function usePackage($package){
 			Router::get()->usePackage($package);
 		}
+		/**
+		 * Creates the output of the application.
+		 * @param mixed $output
+		 */
+		private static function output($output){
+			echo $output;
+		}
 	}
-}

@@ -1,6 +1,4 @@
 <?php
-namespace marvel\datahandler{
-	use marvel\interfaces\iData;
 	class PackageData implements iData{
 		private $data = "";
 		/**
@@ -19,4 +17,3 @@ namespace marvel\datahandler{
 		}
 
 	}
-}

@@ -1,25 +1,16 @@
 <?php
-namespace marvel\database\mysql{
-	use marvel\abstractes\aDatabase;
-	class database extends aDatabase{
-		protected static $instance = NULL;
-		/**
-		 * (non-PHPdoc)
-		 * @see marvel\interfaces.iSingleton::create()
-		 */
-		public static function create(){
-			if(self::$instance === NULL){
-				self::$instance = new self;
-			}
-			return self::$instance;
+
+	class Database{
+		private $driver;
+		public function __construct($parameters = NULL, $driver = NULL){
+			$paramters!=NULL?$this->connect($parameters, $driver):NULL;
+		}
+		public function setDriver(aDatabaseDriver $driver){
+			$this->driver = $driver;
 		}
 
 		public function connect($parameters, $driver = NULL){
-			if($driver == NULL){
-				$this->setDriver(new driver());
-			}else{
-				$this->setDriver(new $driver());
-			}
+			$driver!=NULL?$this->setDriver(new Driver()):$this->setDriver(new $driver());
 			$this->driver->__connect($parameters);
 			return $this;
 		}
@@ -45,4 +36,3 @@ namespace marvel\database\mysql{
 			return $this->driver->__error();
 		}
 	}
-}

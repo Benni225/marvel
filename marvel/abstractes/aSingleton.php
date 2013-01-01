@@ -1,6 +1,4 @@
 <?php
-namespace marvel\abstractes{
-	use marvel\interfaces\iSingleton;
 	/**
 	 * Abstract singleton-class.
 	 * @author Benjamin Werner
@@ -10,4 +8,3 @@ namespace marvel\abstractes{
 		protected function __construct(){}
 		protected function __clone(){}
 	}
-}

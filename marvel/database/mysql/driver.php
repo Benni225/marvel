@@ -1,7 +1,5 @@
 <?php
-namespace marvel\database\mysql{
-	use marvel\core\Exception, marvel\abstractes\aDatabaseDriver;
-	class driver extends aDatabaseDriver{
+	class Driver extends aDatabaseDriver{
 		private $result;
 		public function __connect(Array $parameters){
 			if(!key_exists('database', $parameters) || empty($parameters['database']) || !key_exists('server', $parameters) || empty($parameters['server']) || !key_exists('username', $parameters) || empty($parameters['username']) || !key_exists('password', $parameters) || empty($parameters['password'])){
@@ -68,4 +66,3 @@ namespace marvel\database\mysql{
 			mysqli_close($this->connection);
 		}
 	}
-}

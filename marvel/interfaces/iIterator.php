@@ -1,5 +1,4 @@
 <?php
-namespace marvel\interfaces{
 	interface iIterator{
 		/**
 		 * Jumps to the first position of the ressource.
@@ -22,4 +21,3 @@ namespace marvel\interfaces{
 		 */
 		public function isLast();
 	}
-}

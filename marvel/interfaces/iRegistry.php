@@ -1,5 +1,4 @@
 <?php
-namespace marvel\interfaces{
 	/**
 	 * An interface for a registry-like class.
 	 * @author Benjamin Werner
@@ -26,4 +25,3 @@ namespace marvel\interfaces{
 		 */
 		public static function update($name, $data);
 	}
-}

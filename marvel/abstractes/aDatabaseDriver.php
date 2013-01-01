@@ -1,5 +1,4 @@
 <?php
-namespace marvel\abstractes{
 	abstract class aDatabaseDriver{
 		protected $connection;
 		abstract public function __connect(Array $parameters);
@@ -10,4 +9,3 @@ namespace marvel\abstractes{
 		abstract public function __affectedRows();
 
 	}
-}

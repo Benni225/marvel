@@ -1,5 +1,4 @@
 <?php
-namespace marvel\abstractes{
 	abstract class aIterator{
 		/**
 		 * Ressource
@@ -7,4 +6,3 @@ namespace marvel\abstractes{
 		 */
 		protected $ressource;
 	}
-}

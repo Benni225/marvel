@@ -1,5 +1,4 @@
 <?php
-namespace marvel\interfaces{
 	/**
 	 * The interface for a singleton-class
 	 * @author Benjamin Werner
@@ -11,4 +10,3 @@ namespace marvel\interfaces{
 		 */
 		public static function create();
 	}
-}

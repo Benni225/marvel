@@ -1,7 +1,4 @@
 <?php
-namespace marvel\iterators{
-	use \marvel\interfaces\iIterator, \marvel\abstractes\aIterator;
-
 	class AssoziativArrayIterator extends aIterator implements iIterator{
 		/**
 		 *
@@ -187,6 +184,9 @@ namespace marvel\iterators{
 		public function each($callback, $additionalData = NULL){
 			$rFunction = new \ReflectionFunction($callback);
 			$numberOfParameters = $rFunction->getNumberOfParameters();
+			echo "Ressource: <br />";
+			var_dump($this->ressource);
+			echo "<br /><br />";
 			foreach($this->ressource AS $index=>$value){
 				if($numberOfParameters == 1)
 					call_user_func($callback, $value);
@@ -194,7 +194,7 @@ namespace marvel\iterators{
 					call_user_func($callback, $index, $value);
 				else{
 					$data = array($index, $value);
-					if($additionalData !== NULL){
+					if($additionalData != NULL){
 						array_push($data, $additionalData);
 					}
 					call_user_func_array($callback, $data);
@@ -244,4 +244,3 @@ namespace marvel\iterators{
 			return key($this->ressource);
 		}
 	}
-}

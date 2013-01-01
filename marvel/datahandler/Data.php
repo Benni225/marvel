@@ -1,6 +1,4 @@
 <?php
-namespace marvel\datahandler{
-	use marvel\interfaces\iArrayData;
 	/**
 	 * Stores and handles the POST-data.
 	 * @author Benjamin Werner
@@ -31,4 +29,3 @@ namespace marvel\datahandler{
 			$this->data = $data;
 		}
 	}
-}

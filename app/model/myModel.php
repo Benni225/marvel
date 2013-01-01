@@ -1,6 +1,5 @@
 <?php
-namespace app\controller{
-	class myModel extends \marvel\core\Model{
+	class Model_myModel extends Model{
 		public $id = Array(
 							'var'	=>	'integer',
 							'type'	=>	'column'
@@ -12,4 +11,3 @@ namespace app\controller{
 
 
 	}
-}

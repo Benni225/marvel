@@ -1,6 +1,4 @@
 <?php
-namespace marvel\core{
-	use marvel\abstractes\aSingleton, marvel\interfaces\iRegistry;
 	/**
 	 * Stores every kind of data.
 	 * @author Benjamin Werner
@@ -28,8 +26,13 @@ namespace marvel\core{
 		 * @see marvel\interfaces.iRegistry::add()
 		 */
 		public static function add($name, $data, $dataHandler){
-			self::$registry[$name] = $dataHandler;
-			self::$registry[$name]->set($data);
+			if(!array_key_exists($name, self::$registry)){
+				self::$registry[$name] = $dataHandler;
+				self::$registry[$name]->set($data);
+				return TRUE;
+			}else{
+				return FALSE;
+			}
 		}
 		/**
 		 * (non-PHPdoc)
@@ -55,4 +58,3 @@ namespace marvel\core{
 			}
 		}
 	}
-}

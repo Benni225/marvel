@@ -1,11 +1,8 @@
 <?php
-namespace app\controller{
-	use marvel\Marvel;
-
-	class home{
-		public function homeInit(){
+	class controller_home{
+		public function index(){
 			print "Hello World";
-			$a = new \marvel\iterators\AssoziativArrayIterator(array(
+			$a = new AssoziativArrayIterator(array(
 				0	=>	array(
 					"key1"	=>	"value1",
 					"key2"	=>	"value2",
@@ -28,7 +25,6 @@ namespace app\controller{
 				echo "<br />";
 			});
 			echo "<br />";
-			$m = new myModel();
+			$m = new Model_myModel();
 		}
 	}
-}

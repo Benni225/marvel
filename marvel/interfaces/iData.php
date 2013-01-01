@@ -1,5 +1,4 @@
 <?php
-namespace marvel\interfaces{
 	/**
 	 * An interface for storing a not specified kind of data.
 	 * @author Benjamin Werner
@@ -17,4 +16,3 @@ namespace marvel\interfaces{
 		 */
 		public function set($data);
 	}
-}

@@ -1,6 +1,4 @@
 <?php
-namespace marvel\core{
-	use \marvel\package\Package,\marvel\abstractes\aSingleton;
 	/**
 	 * Routes to a in the URI specified controller and action and extractes
 	 * Given parameters and values.
@@ -46,33 +44,42 @@ namespace marvel\core{
 		 * @version 0.0.1 failure removed: instead of division it has to use modulo
 		 */
 		public function route(){
-			$parameter = $_GET['param'];
-			$parameter = explode("/", $parameter);
-			if(count($parameter) % 2 != 0){
-				/*
-				 * No action is given.
-				 * The first parameter is the name of the controller.
-				 * The action has to be "{controllername}Init"
-				 */
-				self::$controller = $parameter[0];
-				self::$action = $parameter[0]."Init";
-				for($i = 1; $i < count($parameter); $i+=2)
-				$urlParameters[$parameter[$i]] = $parameter[$i+1];
-			}else{
-				/*
-				 * An action is given.
-				 * The first parameter is the name of the controller,
-				 * the second parameter is the name of the action. ({parameter2}Action).
-				 */
-				self::$controller = $parameter[0];
-				self::$action = $parameter[1]."Action";
-				for($i = 2; $i < count($parameter); $i+=2)
-				$urlParameters[$parameter[$i]] = $parameter[$i+1];
+			if(!empty($_GET['param'])){
+				$parameter = $_GET['param'];
+				$parameter = explode("/", $parameter);
+				for($i = 0; $i < count($parameter); $i++){
+					if(in_array("", $parameter)){
+						$p = array_search("", $parameter);
+						unset($parameter[$p]);
+					}
+				}
+
+				if(count($parameter) % 2 != 0){
+					/*
+					 * No action is given.
+					 * The first parameter is the name of the controller.
+					 * The action has to be "{controllername}Init"
+					 */
+					self::$controller = $parameter[0];
+					self::$action = "index";
+					for($i = 1; $i < count($parameter); $i+=2)
+					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+				}else{
+					/*
+					 * An action is given.
+					 * The first parameter is the name of the controller,
+					 * the second parameter is the name of the action. ({parameter2}Action).
+					 */
+					self::$controller = $parameter[0];
+					self::$action = $parameter[1]."Action";
+					for($i = 2; $i < count($parameter); $i+=2)
+					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+				}
+				self::$controller = "Controller_".self::$controller;
 			}
 			//If there is something in $_GET, now it is also in our url-parameters
 			$urlParameters[] = $_GET;
 			self::$urlData = $urlParameters;
-			self::$controller = Package::get(self::$package).self::$controller;
 
 			return $this;
 		}
@@ -81,7 +88,7 @@ namespace marvel\core{
 		 * @param string $package
 		 */
 		public function usePackage($package){
-			self::$package = $package;
+			Package::usePackage($package);
 		}
 		/**
 		 * Returns the singleton-instance.
@@ -126,4 +133,3 @@ namespace marvel\core{
 
 
 	}
-}
