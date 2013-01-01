@@ -3,7 +3,6 @@
 	 * Routes to a in the URI specified controller and action and extractes
 	 * Given parameters and values.
 	 * @author Benjamin Werner
-	 * @todo Integrate wildcards
 	 */
 	class Router extends aSingleton{
 		protected static $instance = NULL;
@@ -18,15 +17,15 @@
 		 */
 		public static $action = "";
 		/**
-		 * The package to route to.
-		 * @var string
-		 */
-		private static $package = "";
-		/**
 		 * Stores additional data from the url
 		 * @var array
 		 */
 		private static $urlData = Array();
+		/**
+		 * Stores routing aliases
+		 * @var array
+		 */
+		private static $alias = Array();
 		/**
 		 * (non-PHPdoc)
 		 * @see marvel\interfaces.iSingleton::create()
@@ -63,7 +62,7 @@
 					self::$controller = $parameter[0];
 					self::$action = "index";
 					for($i = 1; $i < count($parameter); $i+=2)
-					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+						$urlParameters[$parameter[$i]] = $parameter[$i+1];
 				}else{
 					/*
 					 * An action is given.
@@ -73,22 +72,23 @@
 					self::$controller = $parameter[0];
 					self::$action = $parameter[1]."Action";
 					for($i = 2; $i < count($parameter); $i+=2)
-					$urlParameters[$parameter[$i]] = $parameter[$i+1];
+						$urlParameters[$parameter[$i]] = $parameter[$i+1];
 				}
-				self::$controller = "Controller_".self::$controller;
+				$result = self::checkAlias($parameter);
+				if($result === NULL){
+					self::$controller = "Controller_".self::$controller;
+				}else{
+					self::$controller = "Controller_".self::$alias[$result]['alias'][0];
+					!empty(self::$alias[$result]['alias'][1])?
+						self::$action = self::$alias[$result]['alias'][1].'Action':
+						self::$action = 'index';
+				}
 			}
 			//If there is something in $_GET, now it is also in our url-parameters
 			$urlParameters[] = $_GET;
 			self::$urlData = $urlParameters;
 
 			return $this;
-		}
-		/**
-		 * Change the package to route to.
-		 * @param string $package
-		 */
-		public function usePackage($package){
-			Package::usePackage($package);
 		}
 		/**
 		 * Returns the singleton-instance.
@@ -114,7 +114,7 @@
 		/**
 		 * Returns the additional data from the url. For example:
 		 *
-		 * http://www.mysite.com/controller/action/username/Marcus/birthday/11-3-1988/
+		 * http://www.mysite.com/controller/action/username/Marcus/birthday/11-3-1988
 		 *
 		 * will return an multidimensional array like:
 		 * <code>
@@ -130,6 +130,40 @@
 		public function urlData(){
 			return self::$urlData;
 		}
-
-
+		/**
+		 * Register a new alias for an url.
+		 * @param String $url
+		 * @param array $alias
+		 * @example Router::addAlias('my/url', array('controller'[, 'action']));
+		 */
+		public static function addAlias($url, Array $alias){
+			self::$alias[] = array(
+				'url'	=>	$url,
+				'alias'	=>	$alias
+			);
+		}
+		/**
+		 * Checks if the url is equal to an alias
+		 * @param array $parameters
+		 * @return NULL for not or the index of the alias-array
+		 */
+		private static function checkAlias(Array $parameters){
+			foreach(self::$alias AS $index=>$alias){
+				$aliasParameter = explode("/", $alias['url']);
+				$failure = FALSE;
+				for($i = 0; $i < count($aliasParameter); $i++){
+					if(!empty($parameters[$i])){
+						if($aliasParameter[$i] != $parameters[$i]){
+							$failure = TRUE;
+						}
+					}else{
+						$failure = TRUE;
+					}
+				}
+				if($failure == FALSE){
+					return $index;
+				}
+			}
+			return NULL;
+		}
 	}

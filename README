@@ -4,14 +4,27 @@ Marvel wants to be an easy, simple to use PHP-Framework using the MVC-paradigma.
 It wants to support you with an easy syntax.
 
 Example:
+<code>
 Application::create();
 Router::create()->route();
 Router::get()->controller();
 Router::get()->action();
+</code>
 
 The URL-structure is for every app:
-http:://www.server.com/controller/action/parameter1/value1/parameter2/value2/
-The last "/" is important. If it's missing, the application can't routed at moment.
+http:://www.server.com/controller/action/parameter1/value1/parameter2/value2
+
+If you want to use an url-alias you can do it like this:
+Write into the file 'boot.php' of your app:
+<code>
+Router::addAlias('start', array('yourController', 'yourAction'));
+</code>
+
+Now
+http://www.server.com/start/p1/v1/p2/v2
+is the same like
+http://www.server.com/yourController/yourAction/p1/v1/p2/v2
+
 
 In the moment Marvel is in a pre-pre-pre-pre-alpha-phase. Become a part of Marvel.
 

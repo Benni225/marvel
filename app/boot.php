@@ -4,3 +4,5 @@ Application::configuration(array(
 	'defaultAction'	=>	'index'
 ));
 
+Router::addAlias('start/to/togo', array('home'));
+
