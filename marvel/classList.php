@@ -23,5 +23,5 @@ $__classList = Array(
 	'AssoziativArrayIterator'=>'marvel/iterators/AssoziativArrayIterator',
 	'Package'=>'marvel/package/Package',
 	'MySqlQuerybuilder'=>'marvel/database/mysql/Querybuilder',
-	'Redirect'=>'marvel/core/Redirect.php'
+	'Redirect'=>'marvel/core/Redirect'
 );

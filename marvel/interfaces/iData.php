@@ -1,18 +1,18 @@
 <?php
+/**
+ * An interface for storing a not specified kind of data.
+ * @author Benjamin Werner
+ *
+ */
+interface iData{
 	/**
-	 * An interface for storing a not specified kind of data.
-	 * @author Benjamin Werner
-	 *
+	 * Returns the stored data.
+	 * @return mixed
 	 */
-	interface iData{
-		/**
-		 * Returns the stored data.
-		 * @return mixed
-		 */
-		public function get();
-		/**
-		 * Sets the data.
-		 * @param mixed $data
-		 */
-		public function set($data);
-	}
+	public function get();
+	/**
+	 * Sets the data.
+	 * @param mixed $data
+	 */
+	public function set($data);
+}

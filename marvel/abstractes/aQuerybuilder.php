@@ -1,4 +1,4 @@
 <?php
-	abstract class aQuerybuilder extends aSingleton{
-		protected $query;
-	}
+abstract class aQuerybuilder extends aSingleton{
+	protected $query;
+}

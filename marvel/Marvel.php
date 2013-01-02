@@ -1,8 +1,8 @@
 <?php
-	defined("__BASEDIR") or define("__BASEDIR", dirname($_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF'])."/");
-	defined("__SCRIPTDIR") or define("__SCRIPTDIR", __BASEDIR.'marvel/');
-	require_once 'marvel/Autoload.php';
-	class Marvel{
+defined("__BASEDIR") or define("__BASEDIR", dirname($_SERVER['DOCUMENT_ROOT'].$_SERVER['PHP_SELF'])."/");
+defined("__SCRIPTDIR") or define("__SCRIPTDIR", __BASEDIR.'marvel/');
+require_once 'marvel/Autoload.php';
+class Marvel{
 
-	}
-	spl_autoload_register(array('Autoload', 'load'));
+}
+spl_autoload_register(array('Autoload', 'load'));

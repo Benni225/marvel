@@ -1,8 +1,8 @@
 <?php
 Application::configuration(array(
-	'defaultController'	=>	'Controller_home',
+	'defaultController'	=>	'home',
 	'defaultAction'	=>	'index'
 ));
 
-Router::addAlias('start/to/togo', array('home'));
+Router::addAlias('start/to', array('home'));
 
