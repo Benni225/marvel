@@ -6,7 +6,7 @@
  * @version 0.0.1
  *
  */
-class Application{
+class Application extends aSingleton{
 	/**
 	 * Name of the controllerclass
 	 * @var string
@@ -38,10 +38,6 @@ class Application{
 	 */
 	private static $instance = NULL;
 	private static $configuration = Array();
-
-	private function __construct(){}
-	private function __clone(){}
-
 	/**
 	 * Initialize the application and add the standard-package.
 	 * @return Application
@@ -96,19 +92,12 @@ class Application{
 	}
 	/**
 	 * Stores the POST-data and GET-data.
-	 * @todo Add GET
 	 */
 	public static function storeData(){
 		DataRegistry::add("POST", $_POST, new Data());
 		DataRegistry::add("GET", Router::get()->urlData(), new Data());
 	}
-	/**
-	 * Sets the package-name to use as application.
-	 * @param string $package
-	 */
-	public function usePackage($package){
-		Router::get()->usePackage($package);
-	}
+
 	/**
 	 * Creates the output of the application.
 	 * @param mixed $output

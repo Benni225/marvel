@@ -76,9 +76,8 @@ class Router extends aSingleton{
 			if($result === NULL){
 				self::$controller = self::$controller;
 			}else{
-				self::$controller = self::$alias[$result]['alias'][0];
-				!empty(self::$alias[$result]['alias'][1])?
-					self::$action = self::$alias[$result]['alias'][1]:self::$action=NULL;
+				self::$controller = !empty(self::$alias[$result]['alias'][0])?self::$alias[$result]['alias'][0]:NULL;
+				self::$action = !empty(self::$alias[$result]['alias'][1])?self::$alias[$result]['alias'][1]:NULL;
 			}
 		}
 		//If there is something in $_GET, now it is also in our url-parameters

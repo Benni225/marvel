@@ -23,5 +23,16 @@ $__classList = Array(
 	'AssoziativArrayIterator'=>'marvel/iterators/AssoziativArrayIterator',
 	'Package'=>'marvel/package/Package',
 	'MySqlQuerybuilder'=>'marvel/database/mysql/Querybuilder',
-	'Redirect'=>'marvel/core/Redirect'
+	'Redirect'=>'marvel/core/Redirect',
+	/**
+	 * RainTPL
+	 * GNU LESSER GENERAL PUBLIC LICENSE
+	 * Version 3, 29 June 2007
+	 * See License: marvel/raintpl/license.txt
+	 * URL: http://www.raintpl.com
+	 */
+	'RainTPL'=>'marvel/raintpl/rain.tpl.class',
+	'RainTpl_Exception'=>'marvel/raintpl/rain.tpl.class',
+	'RainTpl_NotFoundException'=>'marvel/raintpl/rain.tpl.class',
+	'RainTpl_SyntaxException'=>'marvel/raintpl/rain.tpl.class'
 );

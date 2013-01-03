@@ -1,5 +1,5 @@
 <?php
-class controller_home{
+class Controller_home{
 	public function indexAction(){
 		print "Hello World";
 		$a = new AssoziativArrayIterator(array(
